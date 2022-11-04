@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import SleeperApiClient from "./controllers/SleeperApiClient";
 import axios from "axios";
+import mongoose from './db/mongoose';
 
 // Load environment variables from .env file, where API keys and passwords are configured
 dotenv.config();
@@ -29,6 +30,7 @@ const app = express();
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
+mongoose;
 
 // Start Express server
 app.listen(PORT, (): void => {
